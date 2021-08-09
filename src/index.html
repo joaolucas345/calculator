@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <main>
+        <div class="result-field">
+            <h1 id="answer">0</h1>
+        </div>
+        <div class="keypad-field">
+            <button id="AC" >AC</button>
+            <button id="C" >C</button>
+            <button id="PAN" onclick="pan()">+/-</button>
+            <button id="PORCENTAGE">%</button>
+            <button id="DIVISION"onclick="clickoperator('/')">/</button>
+            <button id="ONE" onclick="clickdigit(1)">1</button>
+            <button id="TWO" onclick="clickdigit(2)">2</button>
+            <button id="THREE" onclick="clickdigit(3)">3</button>
+            <button id="FOURS" onclick="clickdigit(4)">4</button>
+            <button id="FIVE" onclick="clickdigit(5)">5</button>
+            <button id="SIX" onclick="clickdigit(6)">6</button>
+            <button id="SEVEN" onclick="clickdigit(7)">7</button>
+            <button id="EIGHT" onclick="clickdigit(8)">8</button>
+            <button id="NINE" onclick="clickdigit(9)">9</button>
+            <button id="ZERO" onclick="clickdigit(0)">0</button>
+            <button id="COMMA"  onclick="floatfunc()">,</button>
+            <button id="MULTIPLICATION" onclick="clickoperator('X')">X</button>
+            <button id="SUBSTRACTION" onclick="clickoperator('-')">-</button>
+            <button id="ADD" onclick="clickoperator('+')">+</button>
+            <button id="EQUAL" onclick="getResult()">=</button>
+        </div>
+    </main>
+    <script src="script.js"></script>    
+</body>
+</html>

@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    background-color: #F9FAFB;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.keypad-field{
+    display: grid;
+    grid-template-areas: 
+    "AC  C PAN PORCENTAGE DIVISION"
+    "ONE TWO THREE MULTIPLICATION MULTIPLICATION"
+    "FOUR FIVE SIX SUBSTRACTION SUBSTRACTION"
+    "SEVEN EIGHT NINE ADD ADD"
+    "ZERO COMMA EQUAL EQUAL EQUAL";
+}
+button{
+    background-color: #B2BFD8;
+    color: black;
+    font-size: 30px;
+    border: none;
+    height: 99%;
+    width: 99.5%;
+}
+button:hover{
+    filter: brightness(80%);
+}
+.result-field{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-content: center;
+    justify-content: end;
+}
+#answer{
+    font-size: 130px;
+    align-self: center;
+    justify-self: end;
+}
+#AC{
+    grid-area: AC;
+}
+#C{
+    grid-area: C;
+}
+#PAN{
+    grid-area: PAN;
+}
+#PORTCENTAGE{
+    grid-area: PORCENTAGE;
+}
+#DIVISION{
+    grid-area: DIVISION;
+    background-color: #4B99F7;
+    color: #F9FAFB;
+}
+#ONE{
+    grid-area: ONE;
+}
+#TWO{
+    grid-area: TWO;
+}
+#THREE{
+    grid-area: THREE;
+}
+#FOURS{
+    grid-area: FOUR;
+}
+#FIVE{
+    grid-area: FIVE;
+}
+#SIX{
+    grid-area: SIX;
+}
+#SEVEN{
+    grid-area: SEVEN;
+}
+#EIGHT{
+    grid-area: EIGHT;
+}
+#NINE{
+    grid-area: NINE;
+}
+#ZERO{
+    grid-area: ZERO;
+}
+#COMMA{
+    grid-area: COMMA;
+}
+#MULTIPLICATION{
+    grid-area: MULTIPLICATION;
+    background-color: #4B99F7;
+    color: #F9FAFB;
+}
+#SUBSTRACTION{
+    grid-area: SUBSTRACTION;
+    background-color: #4B99F7;
+    color: #F9FAFB;
+}
+#ADD{
+    grid-area: ADD;
+    background-color: #4B99F7;
+    color: #F9FAFB;
+}
+#EQUAL{
+    grid-area: EQUAL;
+    background-color: #FC3C64;
+    color: #F9FAFB;
+}
