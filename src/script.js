@@ -4,18 +4,23 @@ var operator = 0;
 var float = false;
 var float_house = 0;
 var digitone = true;
+let first = true
+let floatString = ""
 function clickdigit(number)
 {   
     if(float == true){
-        var times = 0;
-        while(times < float_house){
-            if(digitone == true){
-                digit_one = digit_one*10;
-            }else{
-                digit_two = digit_two*10;
-            }
-            times = times + 1;
+        if(first){
+            digitone ? floatString += `${digit_one}.` : floatString += `${digit_two}.`
+            first = false
         }
+        // while(times < float_house){
+        //     if(digitone == true){
+        //         digit_one = digit_one*10;
+        //     }else{
+        //         digit_two = digit_two*10;
+        //     }
+        //     times = times + 1;
+        // }
     }
     if(digitone == true){
         if(digit_one <= 9999999){
@@ -36,24 +41,17 @@ function clickdigit(number)
         }
         document.getElementById("answer").innerHTML = digit_two;
     }
-    number = 0;
     console.log("digit one: "+digit_one);
     console.log("digit two: "+digit_two);
 
 
-
     if(float == true){
-        float_house = float_house + 1;
-        var times = 0;
-        while(times < float_house){
-            if(digitone == true){
-                digit_one = digit_one/10;
+        floatString += number
+        digitone ? digit_one = parseFloat(floatString)  : digit_two = parseFloat(floatString)
+            if(digitone){
                 document.getElementById("answer").innerHTML = digit_one;
             }else{
-                digit_two = digit_two/10;
                 document.getElementById("answer").innerHTML = digit_two;
-            }
-            times = times + 1;
         }
     }
 }
@@ -61,8 +59,9 @@ function clickoperator(operatorsign)
 {
     operator = operatorsign;
     digitone = false;
+    first = true
     float = false;
-    float_house = 0;
+    floatString = ""
 }
 function getResult()
 {
@@ -123,6 +122,5 @@ document.getElementById("AC").addEventListener("click", AC);
 document.getElementById("C").addEventListener("click", clear);
 function floatfunc()
 {
-    float = !float;
-    console.log(float);
+    float = true;
 }
